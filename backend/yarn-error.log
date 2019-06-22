@@ -1,0 +1,36 @@
+Arguments: 
+  /home/sajicode/.nvm/versions/node/v12.3.1/bin/node /home/sajicode/.nvm/versions/node/v12.3.1/bin/yarn init
+
+PATH: 
+  /home/sajicode/bin:/home/sajicode/.local/bin:/home/sajicode/go/bin:/usr/local/go/bin:/home/sajicode/.nvm/versions/node/v12.3.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Program Files/Heroku/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/MongoDB/Server/3.6/bin:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/HashiCorp/Vagrant/bin:/mnt/c/Program Files/Oracle/VirtualBox:/mnt/c/Program Files/PostgreSQL/10/bin:/mnt/c/Program Files/nodejs:/mnt/c/Users/USER/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Heroku/bin:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Users/USER/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/USER/AppData/Roaming/npm:/mnt/c/watchman/watchman.exe:/mnt/c/Users/USER/AppData/Local/GitHubDesktop/bin:/snap/bin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  12.3.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/home/sajicode/.nvm/versions/node/v12.3.1/lib/node_modules/yarn/lib/cli.js:125850:13)
+      at Interface.emit (events.js:200:13)
+      at Interface._ttyWrite (readline.js:877:16)
+      at ReadStream.onkeypress (readline.js:189:10)
+      at ReadStream.emit (events.js:200:13)
+      at emitKeys (internal/readline.js:424:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1145:36)
+      at ReadStream.emit (events.js:200:13)
+      at addChunk (_stream_readable.js:290:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
