@@ -17,6 +17,9 @@ const localLogin = new LocalStrategy(localOptions, async (email: string, passwor
 	// otherwise, call done with false
 	try {
 		const user: any = await User.findOne({ email: email.toLowerCase() }).exec();
+
+		if (!user) return done('No user found');
+
 		const passwordMatch = await bcrypt.compare(password, user.password);
 
 		if (passwordMatch) {

@@ -1,5 +1,10 @@
 import { Application, Request, Response } from 'express';
-import { registerUser } from '../controllers/auth';
+import * as passport from 'passport';
+import { registerUser, loginUser } from '../controllers/auth';
+require('../services/passport');
+
+const requireAuth = passport.authenticate('jwt', { session: false });
+const verifyUser = passport.authenticate('local', { session: false });
 
 export default function authRouter(app: Application) {
 	app.get('/auth/test', (_req: Request, res: Response) => {
@@ -7,4 +12,6 @@ export default function authRouter(app: Application) {
 	});
 
 	app.post('/auth/register', registerUser);
+
+	app.post('/auth/login', verifyUser, loginUser);
 }
