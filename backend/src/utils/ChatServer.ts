@@ -1,7 +1,7 @@
 import * as express from 'express';
 import * as socketIO from 'socket.io';
 import { ChatEvent } from './constants';
-import { ChatMessage } from './types';
+import { ChatMessage } from '../types/types';
 import { createServer, Server } from 'http';
 let cors = require('cors');
 
