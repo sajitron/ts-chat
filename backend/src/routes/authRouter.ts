@@ -14,4 +14,8 @@ export default function authRouter(app: Application) {
 	app.post('/auth/register', registerUser);
 
 	app.post('/auth/login', verifyUser, loginUser);
+
+	app.get('/hello', requireAuth, (req: Request, res: Response) => {
+		res.status(200).send("Successfully authenticated! Woop Woop!")
+	})
 }
