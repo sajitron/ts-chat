@@ -85,3 +85,13 @@ export function loginUser(req: Request, res: Response, next: NextFunction) {
 		});
 	})(req, res, next);
 }
+
+export async function getUsers(req: Request, res: Response) {
+	try {
+		const users = await User.find({}).exec();
+
+		res.send(users);
+	} catch (error) {
+		res.status(404).send(error);
+	}
+}
