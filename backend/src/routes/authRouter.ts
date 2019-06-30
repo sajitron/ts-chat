@@ -3,7 +3,7 @@ import * as passport from 'passport';
 import { registerUser, loginUser, getUsers } from '../controllers/auth';
 require('../services/passport');
 
-const requireAuth = passport.authenticate('jwt', { session: false });
+export const requireAuth = passport.authenticate('jwt', { session: false });
 const verifyUser = passport.authenticate('local', { session: false });
 
 export default function authRouter(app: Application) {
