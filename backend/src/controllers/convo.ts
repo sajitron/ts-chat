@@ -57,3 +57,25 @@ export async function getUserConvos(req: Request, res: Response) {
 		res.status(404).send(error);
 	}
 }
+
+// * Get all conversations for a unique pair of users
+export async function getPartyConvos(req: Request, res: Response) {
+	const { partyOne, partyTwo } = req.params;
+
+	try {
+		const convos = await Conversation.find({
+			$or: [
+				{
+					$and: [ { partyTwo: partyTwo }, { partyOne: partyOne } ]
+				},
+				{
+					$and: [ { partyTwo: partyOne }, { partyOne: partyTwo } ]
+				}
+			]
+		}).exec();
+
+		res.send(convos);
+	} catch (error) {
+		res.status(404).send(error);
+	}
+}
