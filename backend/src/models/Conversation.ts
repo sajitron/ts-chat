@@ -7,10 +7,10 @@ interface ConversationDocument extends Document {
 		{
 			sender: string;
 			text: string;
-			created_at: Date;
+			created_at: Date | number;
 		}
 	];
-	created: Date;
+	created: Date | number;
 }
 
 const ConversationSchema = new Schema({
