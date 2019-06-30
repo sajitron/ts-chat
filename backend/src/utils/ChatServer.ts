@@ -12,6 +12,7 @@ import connectDB from '../config/db';
 import { ChatEvent } from './constants';
 import { ChatMessage } from '../types/types';
 import authRouter from '../routes/authRouter';
+import convoRouter from '../routes/convoRouter';
 
 export class ChatServer {
 	public static readonly PORT: number = 5500;
@@ -75,6 +76,7 @@ export class ChatServer {
 	// * setup api routes
 	private setAuthRoute(): void {
 		authRouter(this.app);
+		convoRouter(this.app);
 	}
 	// ? setup static file serving for dev environment
 
