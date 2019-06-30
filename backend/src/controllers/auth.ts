@@ -86,7 +86,7 @@ export function loginUser(req: Request, res: Response, next: NextFunction) {
 	})(req, res, next);
 }
 
-export async function getUsers(req: Request, res: Response) {
+export async function getUsers(_req: Request, res: Response) {
 	try {
 		const users = await User.find({}).exec();
 

@@ -37,3 +37,23 @@ export function createConvo(req: Request, res: Response, next: NextFunction) {
 		}
 	});
 }
+
+export async function getUserConvos(req: Request, res: Response) {
+	const { userid } = req.params;
+
+	try {
+		const convos = await Conversation.find({
+			$or: [
+				{
+					partyOne: userid
+				},
+				{
+					partyTwo: userid
+				}
+			]
+		}).exec();
+		res.send(convos);
+	} catch (error) {
+		res.status(404).send(error);
+	}
+}
