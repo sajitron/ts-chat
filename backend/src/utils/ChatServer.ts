@@ -15,7 +15,7 @@ import authRouter from '../routes/authRouter';
 import convoRouter from '../routes/convoRouter';
 
 export class ChatServer {
-	public static readonly PORT: number = 5500;
+	public static readonly PORT: number = 8080;
 	private _app: express.Application;
 	private server: Server;
 	private io: SocketIO.Server;
